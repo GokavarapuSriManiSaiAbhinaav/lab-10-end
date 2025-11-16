@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./BACKEND
-          file: ./BACKEND/Dockerfile
+          file: ./BACKEND/backend.dockerfile  
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/dockercompose1-backend:latest
 
@@ -39,6 +39,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./FRONTEND
-          file: ./FRONTEND/Dockerfile
+          file: ./FRONTEND/frontend.dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/dockercompse1-frontend:latest
